@@ -27,7 +27,7 @@ class Warrior {
         static size_t constexpr START_AGI = 5;
         static size_t constexpr START_STR = 5;
 
-        Warrior(std::string const& name, long hp=START_HP, size_t str = START_HP, size_t agi = START_AGI):
+        Warrior(std::string const& name, long hp=START_HP, size_t str = START_STR, size_t agi = START_AGI):
             _name(name),
             _hp(hp),
             _str(str),
