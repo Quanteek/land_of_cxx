@@ -11,7 +11,7 @@ void check_validity(std::string const& picture) {
         throw std::runtime_error("not even a single line");
     if(std::find(picture.begin(), picture.end(), 'w') != picture.end())
         throw std::runtime_error("Waldo symbol already in input file");
-    if(std::all_of(picture.begin(), picture.end(), std::isblank))
+    if(std::all_of(picture.begin(), picture.end(), static_cast<int(*)(int)>(std::isspace)))
         throw std::runtime_error("input file full of blank");
 }
 

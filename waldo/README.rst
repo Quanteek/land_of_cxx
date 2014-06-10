@@ -184,7 +184,7 @@ characters by asserting there is at least one non-blank character. The
 ``std::all_of`` algorithm checks if all elements between two iterators verify a
 given function, so what about::
 
-    if(std::all_of(picture.begin(), picture.end(), std::isblank))
+    if(std::all_of(picture.begin(), picture.end(), static_cast<int(*)(int)>(std::isspace)))
             throw std::runtime_error("input file full of blank");
 
 Putting everything together, we get a pretty nice input checking function! The
