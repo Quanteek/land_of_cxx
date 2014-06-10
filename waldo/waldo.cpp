@@ -14,7 +14,7 @@ void hide_waldo(std::string& from) {
     size_t pos;
     do {
         pos = uniform_dist(rnd);
-    } while(std::isblank(from[pos]));
+    } while(std::isspace(from[pos]));
     from[pos] = 'w';
 }
 

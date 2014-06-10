@@ -96,14 +96,14 @@ the whole memory".
 
 To check if the character at this particular location is a blank, one can use::
 
-    std::isblank(waldo[pos])
+    std::isspace(waldo[pos])
 
 so to keep picking chars until a non-blank value is found, we can use a loop::
 
     size_t pos;
     do {
         pos = uniform_dist(rnd);
-    } while(std::isblank(from[pos]));
+    } while(std::isspace(from[pos]));
 
 and finish the work by setting the proper position with the proper value::
 
