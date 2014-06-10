@@ -49,6 +49,7 @@ of our file. The following line involves a bit of dark magic::
 
     std::string waldo{std::istreambuf_iterator<char>{ifs},
                       std::istreambuf_iterator<char>{}
+                     };
 
 so lets explain it. We are creating a ``std::string`` variable named ``waldo``.
 We are using two arguments (between curly braces) to initialize it. One denotes
