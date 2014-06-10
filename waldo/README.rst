@@ -49,6 +49,7 @@ of our file. The following line involves a bit of dark magic::
 
     std::string waldo{std::istreambuf_iterator<char>{ifs},
                       std::istreambuf_iterator<char>{}
+                     };
 
 so lets explain it. We are creating a ``std::string`` variable named ``waldo``.
 We are using two arguments (between curly braces) to initialize it. One denotes
@@ -95,14 +96,14 @@ the whole memory".
 
 To check if the character at this particular location is a blank, one can use::
 
-    std::isblank(waldo[pos])
+    std::isspace(waldo[pos])
 
 so to keep picking chars until a non-blank value is found, we can use a loop::
 
     size_t pos;
     do {
         pos = uniform_dist(rnd);
-    } while(std::isblank(from[pos]));
+    } while(std::isspace(from[pos]));
 
 and finish the work by setting the proper position with the proper value::
 
